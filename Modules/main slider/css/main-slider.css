@@ -1,0 +1,153 @@
+/*----------------------- DEFAULT STYLE -----------------------*/
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*----------------------- MAIN SLIDER -----------------------*/
+
+/**********STRUCTURE**********/
+.main-slider > div {
+    padding: 140px 0;
+    position: relative;
+}
+
+.main-slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main-slider h1 {
+    margin: 0;
+}
+
+.main-slider p {
+    /*margin: 33px 0;*/
+}
+
+.main-slider p:last-of-type {
+    margin: 0 0 28px 0;
+}
+
+/**********COLORS**********/
+.main-slider--colors h1 {
+    color: #313131;
+}
+
+.main-slider--colors p {
+    color: #414141;
+}
+
+.main-slider--colors p:last-of-type {
+    color: #4a4a4a;
+}
+
+
+/**********FONTS**********/
+.main-slider--font {
+    font-family: 'Lato', sans-serif;
+}
+
+.main-slider--font h1 {
+    font-size: 3.55vmax;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-slider--font p {
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+.main-slider--font p:last-of-type {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+
+/**********SLIDER ANIMATION**********/
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+      opacity: .4;
+      /*transform: scale(0.5);*/
+  }
+  to {
+      opacity: 1;
+      /*transform: scale(1);*/
+  }
+}
+
+.slideRight {
+    transform: translate(-100%, 0);
+    animation: slideRight 1.5s forwards;
+}
+
+@keyframes slideRight {
+  from {
+      transform: translate(-100%, 0)
+  }
+  to {
+      transform: translate(0%, 0)
+  }
+}
+
+/**********MAIN BUTTON MODULE**********/
+.button {
+    padding: 21px 25px;
+    background-color: #f6ab34;
+    font-size: 0.875rem;
+    color: white;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    border-radius: .125rem;
+    z-index: 0;
+    position: relative;
+    transition: all .3s cubic-bezier(.02,.01,.47,1);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #104ea3;
+    opacity: 0;
+    border-radius: .125rem;
+    transform: scaleX(0);
+    transition: transform .15s ease-out, opacity .15s ease-out;
+    z-index: -1;
+}
+
+.button:hover {
+    box-shadow: 0 1px 8px rgba(58,51,53,.3);
+}
+
+.button:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+    transition: transform .2s ease-in, opacity .2s ease-in;
+}
+
+/**********RESPONSIVE**********/
+@media (max-width: 991px) {
+
+    /*MAIN SLIDER*/
+    .main-slider > div {
+        text-align: center;
+    }
+
+}

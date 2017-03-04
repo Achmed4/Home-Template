@@ -1,0 +1,223 @@
+/*----------------------- DEFAULT STYLE -----------------------*/
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/*----------------------- INFORMATION -----------------------*/
+
+/**********COLORS**********/
+.information--colors {
+    background-color: #0f4794;
+    color: white;
+}
+
+.information--colors h4 span {
+    color: #f6ab34;
+}
+
+.information--colors li a {
+    color: inherit;
+}
+
+.information--colors li a:hover {
+    color: #f6ab34;
+}
+
+.information--colors ul li p {
+    color: inherit;
+}
+
+.information--colors .info__nav-list--item:hover::before {
+    background-color: #f6ab34;
+}
+
+.information--colors .info__nav-list--item::before {
+    background-color: currentColor;
+}
+
+.information--colors .info__nav-list--item a {
+    color: inherit;
+}
+
+/**********FONTS**********/
+.information--font {
+    font-family: 'Lato', sans-serif;
+}
+
+.information--font li i {
+    font-size: 1.125rem;
+}
+
+.information--font li a {
+    font-size: 0.875rem;
+}
+
+.information--font ul li p {
+    font-size: 0.875rem;
+}
+
+.information--font .info__nav-list--item a {
+    font-size: 0.75rem;
+}
+
+/**********STRUCTURE**********/
+.information {
+    padding: 75px 0 60px;
+}
+
+.flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.information .container > div:first-of-type {
+    width: 50%;
+}
+
+.information .container > div {
+    width: 25%;
+}
+
+.information .logo {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.information li {
+    margin-bottom: 15px;
+}
+
+.info__contact-list--item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.information li i {
+    display: inline-block;
+    margin-right: 10px;
+    color: inherit;
+}
+
+.information h4 {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 7px;
+    color: inherit;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.information h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    width: 80px;
+    height: 1px;
+}
+
+.information h4 span {
+    margin: 0 4px;
+}
+
+.information ul li p {
+    margin: 0;
+}
+
+.information .info__nav-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.information .info__nav-list--item {
+    width: 50%;
+}
+
+.information .info__nav-list--item::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+/*FULL-WIDTH MODE*/
+.information--fullwidth .container > div {
+    width: 100% !important;
+    margin-bottom: 30px;
+}
+
+.information--fullwidth h4 {
+    display: block;
+    padding-left: 10px;
+}
+
+.information--fullwidth ul {
+    padding-left: 36px;
+    list-style-type: initial;
+}
+
+.information--fullwidth h4::after {
+    width: 100% !important;
+}
+
+.information--fullwidth h4 i {
+    margin-right: 8px;
+}
+
+/**********RESPONSIVE**********/
+@media (max-width: 767px) {
+
+    /*CONTAINER*/
+    .container {
+        width: 100%;
+    }
+
+    /*INFORMATION*/
+    .information .container > div {
+        width: 100% !important;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    .information .info__nav-list {
+        width: 100%;
+    }
+    .information .info__nav-list--item {
+        display: block;
+        width: 100%;
+    }
+
+}

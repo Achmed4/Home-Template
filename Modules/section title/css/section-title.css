@@ -1,0 +1,74 @@
+/*----------------------- SECTION TITLE -----------------------*/
+
+/**********COLORS**********/
+.section-title--colors {
+    color: #104ea3;
+}
+
+.section-title--colors::after {
+    background-color: #f6ab34;
+}
+
+.section-title--colors::before {
+    background-color: #fad293;
+}
+
+.section-title--colors p {
+    color: #3d3d3d;
+}
+
+/**********FONTS**********/
+.section-title--font {
+    font-family: 'Lato', sans-serif;
+}
+
+.section-title--font h2 {
+    font-size: 2.375rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-title--font p {
+    font-size: 1.125rem;
+}
+
+/**********STRUCTURE**********/
+.section-title {
+    padding-bottom: 16px;
+    margin-bottom: 43px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 135px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.section-title::before {
+    content: '';
+    width: 84px;
+    height: 1px;
+    position: absolute;
+    bottom: -4px;
+}
+
+.section-title h2 {
+    margin: 0 0 8px 0;
+}
+
+.section-title p {
+    margin: 0;
+}
+
+/**********RESPONSIVE**********/
+@media (max-width: 410px) {
+
+    /*SECTION TITLE*/
+    .section-title--font h2 {
+        font-size: 1.375rem;
+    }
+
+}

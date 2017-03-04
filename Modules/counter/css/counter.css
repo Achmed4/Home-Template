@@ -1,0 +1,130 @@
+/*----------------------- DEFAULT STYLE -----------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/*----------------------- COUNTER-----------------------*/
+
+/**********COLORS**********/
+.counter--colors {
+    background-color: #104ea3;
+    color: white;
+}
+
+.counter--colors .counter--overlay {
+    background-color: rgba(16, 78, 163, 0.5);
+}
+
+/**********FONTS**********/
+.counter--font {
+    font-family: 'Lato', sans-serif;
+}
+
+.counter--font li span:first-child {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+.counter--font li span:last-child {
+    font-size: 0.75rem;
+}
+
+/**********STRUCTURE**********/
+.counter {
+    padding: 77px 10px;
+    position: relative;
+    z-index: 1;
+    /*background-image: url(../imgs/count-bg.jpg);*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+}
+
+.counter .counter--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.counter ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.counter li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 60px;
+    border-right: 2px solid currentColor;
+}
+
+.counter li:last-child {
+    border-right: 0;
+}
+
+.counter li span {
+    display: block;
+}
+
+/**********RESPONSIVE**********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /*COUNTER*/
+    .counter li {
+        padding: 0 40px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    /*COUNTER*/
+    .counter li {
+        width: 50%;
+        margin-bottom: 20px;
+        border: 0;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 410px) {
+
+    /*COUNTER*/
+    .counter li {
+        width: 100%;
+    }
+
+
+}
